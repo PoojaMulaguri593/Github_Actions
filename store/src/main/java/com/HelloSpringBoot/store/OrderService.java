@@ -12,5 +12,6 @@ public class OrderService {
     }
     public void placeOrder(){
         paymentService.processPayment(10);
+        System.out.println("hello");
     }
 }
