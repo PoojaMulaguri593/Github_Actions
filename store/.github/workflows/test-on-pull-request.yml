@@ -10,7 +10,7 @@ name: Java CI with Maven
 
 on:
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "develop"]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,6 +23,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: maven
-      - name: Run unit tests with maven
+      - name: Build and run tests
         run: mvn -B test
 
